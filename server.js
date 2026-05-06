@@ -98,6 +98,12 @@ app.post('/api/chat', async (req, res) => {
 //   }, 1000);
 // });
 
-app.listen(port, () => {
-  console.log(`Server Aika berjalan di port ${port}`);
-});
+// Kita hanya menjalankan app.listen jika di komputer lokalmu
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`Server Aika berjalan di port ${port}`);
+  });
+}
+
+// Baris mutlak agar Vercel bisa membaca otak ini
+export default app;
