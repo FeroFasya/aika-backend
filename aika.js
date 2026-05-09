@@ -44,7 +44,7 @@
 
     // Pake model Gemini 2.5 Flash yang cepat, dan menanamkan DNA-nya
     const model = genAI.getGenerativeModel({ 
-    model: "gemini-3-flash-preview",
+    model: "gemini-3.1-pro-preview",
     systemInstruction: {
         parts: [{ text: SYSTEM_PROMPT }],
         role: "model"
